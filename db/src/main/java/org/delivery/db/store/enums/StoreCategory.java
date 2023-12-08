@@ -12,7 +12,7 @@ public enum StoreCategory {
     CHICKEN("치킨","치킨"),
     PIZZA("피자","피자"),
     HAMBURGER("햄버거","햄버거"),
-    COFFEE_TEA("커피&차","커피&차"),
+    COFFEE_TEA("커피&차","커피&차")
     ;
 
 
