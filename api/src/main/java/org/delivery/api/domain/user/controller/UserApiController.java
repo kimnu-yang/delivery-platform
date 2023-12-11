@@ -1,5 +1,6 @@
 package org.delivery.api.domain.user.controller;
 
+import io.swagger.v3.oas.annotations.Parameter;
 import lombok.RequiredArgsConstructor;
 import org.delivery.api.common.annotation.UserSession;
 import org.delivery.api.common.api.Api;
@@ -23,6 +24,7 @@ public class UserApiController {
 
     @GetMapping("/me")
     public Api<UserResponse> me(
+            @Parameter(hidden = true)
             @UserSession User user
     ){
 
