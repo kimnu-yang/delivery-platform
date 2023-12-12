@@ -31,7 +31,7 @@ public class SecurityConfig {
                     it
                             .requestMatchers(
                                     PathRequest.toStaticResources().atCommonLocations()
-                            ).permitAll() // resource 에 대해서 모든 요청 허ㅛㅇ
+                            ).permitAll() // resource 에 대해서 모든 요청 허용
 
                             // swagger 는 인증 없이 통과
                             .requestMatchers(

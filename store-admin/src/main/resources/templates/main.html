@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="kor" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>MAIN PAGE</h1>
+
+    <h1 th:text="${#authentication}"></h1><br>
+
+    <div th:if="${#authentication != null}">
+        <p>Authenticated</p>
+    </div>
+    <div th:if="${#authentication == null}">
+        <p>Not Authenticated</p>
+    </div>
+
+    <table>
+        <tr>
+            <td>Username</td>
+            <td><span sec:authentication="name"></span></td>
+        </tr>
+        <tr>
+            <td>Authorities</td>
+            <td><span sec:authentication="principal.authorities"></span></td>
+        </tr>
+    </table>
+</body>
+</html>
