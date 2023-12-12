@@ -7,6 +7,8 @@ import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configurers.CsrfConfigurer;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 
 import java.util.List;
@@ -47,5 +49,11 @@ public class SecurityConfig {
                 ;
 
         return  httpSecurity.build();
+    }
+
+    @Bean
+    public PasswordEncoder passwordEncoder(){
+        // hash 로 암호화
+        return new BCryptPasswordEncoder();
     }
 }
