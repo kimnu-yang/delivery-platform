@@ -1,5 +1,5 @@
 ## Intro
-: &nbsp; 해당 프로젝트는 자바 스프링부트를 이용한 배달 플랫폼의 API 서버를<br>
+: &nbsp; 해당 프로젝트는 자바 스프링부트를 이용한 배달 플랫폼의 API 서버로 고객이 주문하고 음식점에서 이를 확인해 배송하는 프로세스를 포함하고 있으며,
 프로젝트 하위에 User Api, Store Api, Common, DB 각각의 모듈로 나누어 개발한 멀티 모듈 구조의 스프링부트 프로젝트입니다.
 
 ## Project Summary
@@ -11,6 +11,8 @@
   - MySQL 8.0.2
 - ORM
   - JPA
+- 빌드
+  - Gradle / Groovy
 - 메시지 큐
   - RabbitMQ 3.1.2
 - 웹 인증 방식
